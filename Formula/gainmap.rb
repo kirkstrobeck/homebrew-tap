@@ -1,9 +1,9 @@
 class Gainmap < Formula
   desc "Convert images to Ultra HDR JPEG gain maps"
   homepage "https://gainmaps.com"
-  url "https://github.com/kirkstrobeck/gainmaps.com/releases/download/v1.0.0/gainmap-1.0.0.tgz"
-  version "1.0.0"
-  sha256 "4047c08ee44613c9e3a6b954d2c0efb71165af9ef0619f6ea6acd406468079ba"
+  url "https://github.com/kirkstrobeck/gainmaps.com/releases/download/v1.1.0/gainmap-1.1.0.tgz"
+  version "1.1.0"
+  sha256 "f3ea5a6c8a6ce785d1565e1a09ac519e95b67fc2081e650b7b947b2cd689748d"
   license "MIT"
   head "https://github.com/kirkstrobeck/gainmaps.com.git", branch: "main"
 
@@ -30,6 +30,6 @@ class Gainmap < Formula
 
   test do
     assert_match "gainmap", shell_output("#{bin}/gainmap --help")
-    assert_match "gainmap 1.0.0", shell_output("#{bin}/gainmap --version 2>&1")
+    assert_match "gainmap 1.1.0", shell_output("#{bin}/gainmap --version 2>&1")
   end
 end
